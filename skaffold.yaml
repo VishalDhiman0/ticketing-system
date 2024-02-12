@@ -15,5 +15,13 @@ build:
         manual:
           - src: 'src/**/.ts'
             dest: .
+    - image: vishaldhiman1999/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
 deploy:
  kubectl: {}
